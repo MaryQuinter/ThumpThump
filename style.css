@@ -11,6 +11,8 @@
 #BDBDD7
 #D9D9D9
 #F5EDED
+
+#A076F9 /*gradient*/
 */
 
 /*fuentes
@@ -28,7 +30,7 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: #000 solid 1px;
+    border-bottom: #BDBDD7 solid 1px;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
@@ -40,27 +42,43 @@ nav{
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     padding-left: 1rem;
+    text-decoration: none;
 }
 
 .search-container{
     display: flex;
-    width: 30%;
     justify-content: flex-end;
     align-items: center;
 }
 .search-container input{
     height: 2rem;
     width: 15rem;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: 0;
     outline: none;
     padding-left: 1rem;
     background-color: #F5EDED;
 }
+.search-container button{
+    height: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0;
+    padding-right: 0.2rem;
+    padding-left: 0.3rem;
+    background-color: #F5EDED;
+    cursor: pointer;
+}
+
 .icons-notificaciones{
     display: flex;
-    width: 30%;
+    width: 25%;
     justify-content: space-around;
+}
+.icono-search{
+    width: 16px;
+    height: 16px;
 }
 
 /*Banner*/
@@ -201,6 +219,7 @@ nav{
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 
 
@@ -243,7 +262,9 @@ nav{
 }
 
 /*FOOTER*/
-
+a{
+    text-decoration: none;
+}
 .container-footer{
     padding: 1rem;
 }
@@ -263,12 +284,185 @@ nav{
 }
 
 
+
+
+/* -------------css BTS PROFILE*/
+
+.contenedor-perfil-artist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7rem 2rem 7rem;
+    /* background: -moz-linear-gradient(bottom, #aa00ff34, rgba(255, 255, 255, 0.5));
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aa00ff96), to(rgba(255, 255, 255, 0.5))); */
+}
+
+/*Caja de Logo artista y nombre*/
+.artist-logo-y-nombre{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.artist-logo-y-nombre div{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.artist-logo-y-nombre div h1{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+.artist-logo{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+.icono-verificado{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/*Caja de numero de miembros y boton de unirse*/
+.caja-miembros-y-unirse{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    column-gap: 3rem;
+}
+.caja-miembros-y-unirse div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.caja-miembros-y-unirse div p:first-child{
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+
+
+/*ajustes en boton de unirse*/
+.contenedor-perfil-artist div button{
+    padding: 0.4rem 3rem 0.4rem 3rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 0.8rem;
+    border-style: none;
+    box-shadow: 0 0 20px #aa00ff; 
+}
+
+
+/*Menu del perfil*/
+.menu-profile-container{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid #BDBDD7 1px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.menu-profile-container a{
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+/*Fan letter*/
+.fan-letter-section{
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    background-color: #f5eded5b;
+}
+.fan-letter-section a{
+    display: flex;
+    align-items: center;
+    color: #000;
+    column-gap: 0.5rem;
+    padding: 2rem 1rem 2rem 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+/*Container con la descripción del artista*/
+.container-about-artist{
+    display: flex;
+    column-gap: 2rem;
+    padding: 1rem 2rem;
+}
+.foto-about-artist{
+    width: 21rem;
+    height: 25rem;
+    border-radius: 0.5rem;
+}
+
+/*Container foto artistas + descripción| Perfiles de artistas*/
+.container-descripcion-artistas{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-bottom: 1rem;
+}
+.container-descripcion-artistas p:first-child{
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.container-descripcion-artistas p:nth-child(2){
+    font-family: 'Roboto', sans-serif;
+}
+.container-descripcion-artistas p:nth-child(3){
+    font-family: 'Roboto', sans-serif;
+}
+.negrita-primera-palabra{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*container perfiles de artistas*/
+.container-perfiles-integrantes{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.container-perfiles-integrantes img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.container-perfiles-integrantes div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
 /*Media Queries INDEX.HTML*/
+@media (max-width: 1088px){
+    .cards-generos{
+        justify-content: center;
+        column-gap: 1.3rem;
+    }
+}
 
 @media (max-width: 790px){
     nav{
         justify-content: space-around;
         row-gap: 2rem;
+        flex-wrap: wrap;
     }
     .search-container input{
         display: none;
