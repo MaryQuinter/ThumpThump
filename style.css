@@ -72,8 +72,9 @@ nav{
 }
 
 .icons-notificaciones{
-    display: flex;
+    
     width: 25%;
+    display: flex;        /*botones escondidos hasta que el usuario se loguee*/
     justify-content: space-around;
 }
 .icono-search{
@@ -97,9 +98,9 @@ nav{
 /*Agregar comunidades index*/
 
 .agregar-grupos{
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-left: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-bottom: #6627be8c solid 1px;
 }
 .agregar-grupos p{
@@ -119,28 +120,33 @@ nav{
 /*Flex cards artistas*/
 .contenedor-cards-artistas-hero{
     padding: 3rem 2rem;
+    padding-bottom: 5rem;
 }
 .titulo-genero{
-    padding-left: 2rem;
-    padding-bottom: 1.7rem;
-    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 4rem;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.9rem;
+    font-size: 2.4rem;
+}
+.titulo-genero strong::first-letter{
+    color: #6527BE;
 }
 .titulo-explorar{
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     padding-bottom: 0.5rem;
 }
 .flex-cards-artistas{
     display: inline-flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    row-gap: 1.2rem;
+    gap: 2rem;
 }
 .flex-cards-artistas div{
     background-color: #F5EDED;
@@ -186,6 +192,7 @@ nav{
 
 .contenedor-generos-her{
     padding: 2rem 4rem;
+    padding-bottom: 5rem;
     background-color: #F5EDED;
 }
 .contenedor-generos-her h1{
@@ -471,6 +478,10 @@ a{
         width: 100%;
     }
 
+    .titulo-explorar{
+        font-size: 2rem;
+    }
+
     .container-footer div{
         font-size: 0.7rem;
     }
@@ -505,6 +516,9 @@ a{
         color: #fff;
         font-size: 1.6rem;
         font-weight: 500;
+    }
+    .titulo-explorar{
+        font-size: 1.5rem;
     }
 }
 
