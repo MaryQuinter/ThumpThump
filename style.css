@@ -379,6 +379,8 @@ a{
     border-bottom: solid #BDBDD7 1px;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    width: 100%;          /* Ancho del contenedor */
+    overflow-x: auto; 
 }
 .menu-profile-container a{
     display: flex;
@@ -422,7 +424,7 @@ a{
 /*container perfiles de artistas*/
 .container-perfiles-integrantes{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -432,7 +434,7 @@ a{
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    box-shadow: 0 0 20px #068FFF; 
+    box-shadow: 0 0 20px #aa00ff; 
 }
 .container-perfiles-integrantes div{
     display: flex;
@@ -453,29 +455,31 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 6rem;
+    column-gap: 3rem;
     row-gap: 4rem;
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 2rem 2rem 2rem 4rem;
 }
 .fondo-card-album{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     background-color: #F3F3F3;
-    padding: 1.3rem 1rem 3rem 1.3rem;
+    padding: 1.3rem 1rem 3rem 1rem;
     border-radius: 5%;
 }
 .fondo-card-album p{
     font-family: 'Roboto', sans-serif;
     font-weight: light;
+    font-size: 0.8rem;
+
 }
 .fondo-card-album strong{
-    font-size: 1.2rem;
+    font-size: .9rem;
     color: #000;
 }
 .album-img-size{
-    width: 13rem;
-    height: 15rem;
+    width: 10rem;
+    height: 11rem;
 }
 
 /*Media Queries INDEX.HTML*/
@@ -495,6 +499,9 @@ a{
     .search-container input{
         display: none;
     }
+    .search-container button {
+        background-color: #fff;
+    }
     .icons-notificaciones{
         width: 100%;
     }
@@ -502,6 +509,7 @@ a{
     .titulo-explorar{
         font-size: 2rem;
     }
+
 
     .container-footer div{
         font-size: 0.7rem;
@@ -595,8 +603,79 @@ a{
 @media (max-width: 1381px){
     .container-about-artist {
         display: flex;
-        column-gap: 3rem;
-        padding: 2rem 7rem;
+        column-gap: 2rem;
+        padding: 2rem 2rem;
+    }
+    .container-perfiles-integrantes{
+        column-gap: 1rem;
+    }
+    .foto-about-artist{
+        height: 27rem;
     }
 }
+@media (max-width: 1112px){
+   .container-about-artist{
+    display: grid;
+    grid-template-rows: 27rem 1fr;
+    grid-template-areas: 
+    'foto-about-artist'
+    'container-descripcion-artistas'
+    ;
+    justify-items: center;
+    row-gap: 1rem;
+   } 
+    .foto-about-artist{
+        grid-area: foto-about-artist;
+        width: 25rem;
+    }
+    .container-descripcion-artistas{
+        grid-area: container-descripcion-artistas;
+    }
+    .artist-logo{
+        width: 10rem;
+        height: 10rem;
+    }
+    .artist-logo-y-nombre div h1 {
+        font-size: 2rem;
+    }
+    .contenedor-perfil-artist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 4rem 2rem 4rem;
+    }
+}
+
+@media (max-width: 828px){
+    .contenedor-perfil-artist{
+        display: grid;
+        grid-template-rows: 1fr 10rem;
+        grid-template-areas: 
+        'artist-logo-y-nombre'
+        'member-fav-box'
+        ;
+        justify-content: center;
+    }
+    .artist-logo-y-nombre{
+        grid-area: artist-logo-y-nombre;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .member-fav-box{
+        grid-area: member-fav-box;
+    }
+
+    .icono-verificado{
+        width: 1rem;
+        height: 1rem;
+    }
+    .artist-logo-y-nombre div {
+        display: flex;
+        align-items: center;
+        column-gap: .2rem;
+    }
+}
+
+
 
