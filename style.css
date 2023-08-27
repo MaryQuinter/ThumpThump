@@ -72,7 +72,7 @@ nav{
 }
 
 .icons-notificaciones{
-    
+    /*visibility: hidden;*/
     width: 25%;
     display: flex;        /*botones escondidos hasta que el usuario se loguee*/
     justify-content: space-around;
@@ -274,6 +274,7 @@ a{
 }
 .container-footer{
     padding: 1rem;
+    background-color: #F3F3F3;
 }
 .container-footer div{
     display: inline-flex;
@@ -293,13 +294,14 @@ a{
 
 
 
-/* -------------css BTS PROFILE*/
+/* -------------------------------------------------css BTS PROFILE*/ 
 
 .contenedor-perfil-artist{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 7rem 2rem 7rem;
+    padding: 2rem 9rem 2rem 9rem;
     /* background: -moz-linear-gradient(bottom, #aa00ff34, rgba(255, 255, 255, 0.5));
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#aa00ff96), to(rgba(255, 255, 255, 0.5))); */
 }
@@ -321,7 +323,7 @@ a{
 }
 .artist-logo{
     width: 12rem;
-    height: 12rem;
+    height: 12rem; 
     border-radius: 50%;
 }
 .icono-verificado{
@@ -330,6 +332,11 @@ a{
 }
 
 /*Caja de numero de miembros y boton de unirse*/
+.member-fav-box{
+    display: flex;
+    column-gap: 2rem;
+}
+
 .caja-miembros-y-unirse{
     display: flex;
     flex-direction: column;
@@ -340,8 +347,10 @@ a{
 .caja-miembros-y-unirse div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    row-gap: 0.5rem;
 }
 .caja-miembros-y-unirse div p:first-child{
     font-weight: bolder;
@@ -359,6 +368,7 @@ a{
     border-radius: 0.8rem;
     border-style: none;
     box-shadow: 0 0 20px #aa00ff; 
+    column-gap: 5rem;
 }
 
 
@@ -380,31 +390,17 @@ a{
     font-weight: bold;
 }
 
-/*Fan letter*/
-.fan-letter-section{
-    display: flex;
-    justify-content: end;
-    list-style: none;
-    background-color: #f5eded5b;
-}
-.fan-letter-section a{
-    display: flex;
-    align-items: center;
-    color: #000;
-    column-gap: 0.5rem;
-    padding: 2rem 1rem 2rem 4rem;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
 /*Container con la descripción del artista*/
 .container-about-artist{
     display: flex;
-    column-gap: 2rem;
-    padding: 1rem 2rem;
+    column-gap: 7rem;
+    padding: 2rem 7rem;
+    border-bottom: solid 1px #BDBDD7;
+    background-color: #000;
+    color: #fff;
 }
 .foto-about-artist{
-    width: 21rem;
+    width: 22rem;
     height: 25rem;
     border-radius: 0.5rem;
 }
@@ -415,47 +411,72 @@ a{
     flex-direction: column;
     row-gap: 2rem;
     padding-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 .container-descripcion-artistas p:first-child{
-    font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
-}
-.container-descripcion-artistas p:nth-child(2){
-    font-family: 'Roboto', sans-serif;
-}
-.container-descripcion-artistas p:nth-child(3){
-    font-family: 'Roboto', sans-serif;
-}
-.negrita-primera-palabra{
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: lighter;
 }
 
 
 /*container perfiles de artistas*/
 .container-perfiles-integrantes{
     display: flex;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: center;
     flex-wrap: wrap;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
+    column-gap: 2rem;
 }
 .container-perfiles-integrantes img{
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+    box-shadow: 0 0 20px #068FFF; 
 }
 .container-perfiles-integrantes div{
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: .5rem;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+}
+.container-perfiles-integrantes p{
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;       
+}
+.artist-name{
+    font-weight: bolder;
 }
 
-
+/*------cards de albums*/
+.albums-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 6rem;
+    row-gap: 4rem;
+    padding: 2rem 4rem 4rem 4rem;
+}
+.fondo-card-album{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: #F3F3F3;
+    padding: 1.3rem 1rem 3rem 1.3rem;
+    border-radius: 5%;
+}
+.fondo-card-album p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+}
+.fondo-card-album strong{
+    font-size: 1.2rem;
+    color: #000;
+}
+.album-img-size{
+    width: 13rem;
+    height: 15rem;
+}
 
 /*Media Queries INDEX.HTML*/
 @media (max-width: 1088px){
@@ -562,6 +583,20 @@ a{
 
 
 
+/*Media Queries BTSPROFILE.HTML************/
+@media (max-width: 1465px){
+    .container-about-artist {
+        display: flex;
+        column-gap: 3rem;
+        padding: 2rem 7rem;
+    }
+}
 
-
+@media (max-width: 1381px){
+    .container-about-artist {
+        display: flex;
+        column-gap: 3rem;
+        padding: 2rem 7rem;
+    }
+}
 
