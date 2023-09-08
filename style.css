@@ -377,11 +377,10 @@ a{
     display: flex;
     justify-content: space-around;
     border-bottom: solid #BDBDD7 1px;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 100%;          /* Ancho del contenedor */
-    overflow-x: auto; 
 }
+
 .menu-profile-container a{
     display: flex;
     align-items: center;
@@ -390,6 +389,10 @@ a{
     color: #000;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    transition: transform 0.3s; 
+}
+.menu-profile-container .active:hover{
+    transform: scale(1.1);
 }
 
 /*Container con la descripción del artista*/
@@ -455,15 +458,15 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 3rem;
+    column-gap: 2rem;
     row-gap: 4rem;
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 2rem 2rem 5rem 4rem;
 }
 .fondo-card-album{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    background-color: #F3F3F3;
+    background-color: #f3f3f3c4;
     padding: 1.3rem 1rem 3rem 1rem;
     border-radius: 5%;
 }
@@ -478,7 +481,7 @@ a{
     color: #000;
 }
 .album-img-size{
-    width: 10rem;
+    width: 11rem;
     height: 11rem;
 }
 
@@ -493,7 +496,7 @@ a{
 @media (max-width: 790px){
     nav{
         justify-content: space-around;
-        row-gap: 2rem;
+        row-gap: 3.2rem;
         flex-wrap: wrap;
     }
     .search-container input{
@@ -505,11 +508,18 @@ a{
     .icons-notificaciones{
         width: 100%;
     }
-
+    .icons-notificaciones img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .sello-principal{
+        padding-left: 0rem;
+        font-size: 1.5rem;
+    }
     .titulo-explorar{
         font-size: 2rem;
     }
-
+    
 
     .container-footer div{
         font-size: 0.7rem;
@@ -522,6 +532,17 @@ a{
     }
     .anuncio-fans h2{
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 655px){
+    .agregar-grupos{
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .agregar-grupos p{
+        font-size: 1rem;
     }
 }
 
@@ -547,7 +568,7 @@ a{
         font-weight: 500;
     }
     .titulo-explorar{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -622,7 +643,7 @@ a{
     'container-descripcion-artistas'
     ;
     justify-items: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
    } 
     .foto-about-artist{
         grid-area: foto-about-artist;
@@ -632,8 +653,8 @@ a{
         grid-area: container-descripcion-artistas;
     }
     .artist-logo{
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
     }
     .artist-logo-y-nombre div h1 {
         font-size: 2rem;
@@ -676,6 +697,142 @@ a{
         column-gap: .2rem;
     }
 }
+
+@media (max-width: 728px){
+    .container-perfiles-integrantes {
+        display: flex;
+        justify-content: center;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        flex-wrap: wrap;    
+    }
+
+    .albums-container{
+        padding: 3rem 2rem 5rem 2rem;
+    }  
+}
+
+@media (max-width: 611px){
+    .menu-profile-container .ocultar span{
+        display: none;
+    }
+    .menu-profile-container{
+        background-color: #F3F3F3;
+    }
+}
+
+@media (max-width: 465px){
+    .foto-about-artist{
+        width: 21rem
+
+    }
+    .container-descripcion-artistas p:first-child{
+        font-size: 1rem;
+        font-weight: bold;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 513px){
+    .album-img-size{
+        width: 9rem;
+        height: 9rem;
+    }
+    .fondo-card-album strong {
+        font-size: .8rem;
+        color: #000;
+    }
+    .fondo-card-album p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: light;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 483px){
+    .container-perfiles-integrantes img{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 449px){
+    .albums-container {
+        row-gap: .8rem;
+        column-gap: .8rem;
+    }
+    .album-img-size{
+        width: 7rem;
+        height: 6rem;
+    }
+    .fondo-card-album strong {
+        font-size: .6rem;
+        color: #000;
+    }
+    .fondo-card-album p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: light;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 415px){
+    .artist-logo{
+        width: 6rem;
+        height: 6rem;
+    }
+    .container-perfiles-integrantes img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .foto-about-artist{
+        width: 18rem;
+        height: 25rem;
+    }
+    .container-descripcion-artistas p:first-child {
+        padding-top: .1rem;
+    }
+    .contenedor-perfil-artist div button{
+        font-size: .8rem;
+        border-radius: 0.7rem;
+        box-shadow: 0 0 10px #aa00ff;
+    }
+    .albums-container{
+        padding: 1rem .5rem 1rem .1rem;
+    }
+    .foto-about-artist{
+        width: 19rem;
+        height: 23rem;
+    }
+    .container-about-artist{
+        padding: 1.5rem;
+        row-gap: .1rem;
+    }
+    .caja-miembros-y-unirse div p{
+        font-weight: bolder;
+        font-size: .7rem;
+    }
+}
+@media (max-width: 355px){
+    .container-about-artist {
+        display: grid;
+        grid-template-rows: 22rem 1fr;
+        grid-template-areas:
+        'foto-about-artist'
+        'container-descripcion-artistas';
+        justify-items: center;
+        row-gap: 2rem;
+    }
+    .foto-about-artist{
+        width: 17rem;
+        height: 21rem;
+    }
+}
+
+
+    
+
+
 
 
 
