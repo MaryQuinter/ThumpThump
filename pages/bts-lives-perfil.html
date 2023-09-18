@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS | ThumpThump</title>
+    <link rel="shortcut icon" href="../assets/icons/sonido-de-onda.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section class="hero-container-bts-profile">
+        <header>
+            <nav class="menu">
+                <div class="logo-principal">
+                <a class="sello-principal" href="../index.html"><img src="../assets/icons/sonido-de-onda.png" alt="Onda de sonido"><strong>ThumpThump</strong></a>
+                </div>
+
+                <div class="search-container">
+                    <input type="search" placeholder="Buscar artista">
+                    <button type="submit">
+                        <img class="icono-search" src="../assets/icons/search-p.png" alt="Lupa">
+                    </button>
+                </div>
+
+                <div class="icons-notificaciones">
+                    <a href=""><img src="../assets/icons/corazon.png" alt="corazon de notificaciones"></a>
+                    <a href=""><img src="../assets/icons/hogar.png" alt="hogar de inicio"></a>
+                    <a href=""><img src="../assets/icons/bolsa-shop.png" alt="bolsa de tienda"></a> <!--post relacionados con fans-->
+                    <a href=""><img src="../assets/icons/avatar.png" alt=""></a>
+                </div>
+            </nav>
+
+            <section class="contenedor-perfil-artist">
+                <div class="artist-logo-y-nombre">
+                    <img class="artist-logo" src="../assets/icons/logo-bts.jpg" alt="Logo de BTS">
+                    <div>
+                        <h1>BTS</h1>
+                        <img class="icono-verificado" src="../assets/icons/correcto.png" alt="">
+                    </div>
+                </div>
+
+                <div class="member-fav-box">
+                    <div class="caja-miembros-y-unirse">
+                        <div>
+                            <p class="members-number">0</p>
+                            <p>Miembros</p>
+                        </div>
+                        <button>Unirse</button>
+                    </div>
+                    <div class="caja-miembros-y-unirse">
+                        <div>
+                            <img src="../assets/icons/favorito-vacio.png" alt="">
+                            <p>Favoritos</p>
+                        </div>
+                        <button>Añadir</button>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="menu-profile-container">
+                <a href="../pages/btsprofile.html" class="active"><img src="../assets/icons/tocar.png" alt="">Albums</a>
+                <a href="../pages/btsfotos.html" class="ocultar active"><img src="../assets/icons/camara.png" alt=""><span>Fotos</span></a>
+                <a href="#" class="ocultar active"><img src="../assets/icons/boligrafo.png" alt=""><span>Thoughts</span></a>
+                <a href="" class="ocultar active"><img src="../assets/icons/camara-de-video.png" alt=""><span>Lives</span></a>
+                <a href="#" class="ocultar active"><img src="../assets/icons/calendario.png" alt=""><span>Eventos</span></a>
+            </section>
+
+            <section id="apiSection">
+                <div id="videosContainer" class="video-container">
+
+                </div>
+
+                <button id="prevButton">Anterior</button>
+                <button id="nextButton">Siguiente</button>
+            </section>
+            
+        </main>
+
+        <!--Vinculo a archivo de programa a Youtube Data API-->
+        <script src="../js/bts-videos-api.js"></script>
+    </body>
+    </html>
