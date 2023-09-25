@@ -503,22 +503,63 @@ a{
 
 
 /*-----------------------------------------BTS YOUTUBE API ------------------*/
-
-.video-card {
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    text-align: center;
-    display: inline-block;
-    width: calc(45% - 20px); /* Ancho de las tarjetas con margen */
-    vertical-align: top; /* Alinea las tarjetas en la parte superior */
+#apiSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    gap: 2rem;
+    padding: 3rem;
+}
+.video-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+.video-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 15rem;
+    row-gap: 2rem;
+    background-color: #f3f3f30a;
+    border-radius: .2rem;
+}
+.contenedor-botones-prev-next{
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E1E;
+    gap: 2rem;
+}
+.video-card p{
+    color: #F3F3F3;
+    font-family: 'Roboto', sans-serif;
+}
+.video-card iframe{
+    border-style: none;
+    border-radius: .2rem;
 }
 
-.video-card iframe {
-    width: 100%; /* Ajusta el ancho del iframe al 100% de la tarjeta */
-    height: 200px; /* Altura del iframe, ajusta según tu preferencia */
+/*estilo botones*/
+#nextButton{
+    background-color: #6527BE;
+    padding: 1rem 2rem 1rem 2rem;
+    color: #F3F3F3;
+    font-family: 'Roboto', sans-serif;
+    border-style: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+#prevButton{
+    background-color: #D9D9D9;
+    padding: 1rem 2rem 1rem 2rem;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    border-style: none;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 
@@ -915,8 +956,46 @@ a{
     }
 }
 
+/*-----------------------------------------BTS YOUTUBE API media Queries------------------*/
 
+@media (max-width: 1070px){
+    .video-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(6, 1fr);
+        justify-content: center;
+        gap: 1rem;
+    }
+}
 
+@media (max-width: 798px){
+    .video-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(8, 1fr);
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+#apiSection{
+    padding: 2rem;
+}
 
-
-
+@media (max-width: 570px){
+    .video-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 1fr);
+        justify-content: center;
+        gap: 1rem;
+    }
+    .video-card{
+        height: 20rem;
+    }
+    .video-card iframe{
+        height: 15rem;
+    }
+}
